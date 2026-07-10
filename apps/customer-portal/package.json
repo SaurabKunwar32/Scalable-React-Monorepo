@@ -7,10 +7,12 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "test": "jest",
     "preview": "vite preview"
   },
   "dependencies": {
     "@repo/eslint-config": "workspace:*",
+    "@repo/jest-config": "workspace:*",
     "@repo/ui": "workspace:*",
     "@repo/utils": "workspace:*",
     "react": "^19.2.7",
