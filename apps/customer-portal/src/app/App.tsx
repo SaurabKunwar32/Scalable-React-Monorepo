@@ -10,7 +10,7 @@ function App() {
           alert(formatCurrency(12345));
         }}
       />
-      <p>This is data from new branch</p>
+      <p>This is data from new branch !!</p>
     </>
   );
 }
