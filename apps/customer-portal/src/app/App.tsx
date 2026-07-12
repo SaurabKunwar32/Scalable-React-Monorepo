@@ -11,6 +11,7 @@ function App() {
         }}
       />
       <p>This is data from new branch !!</p>
+      <p>New branch added !</p>
     </>
   );
 }
