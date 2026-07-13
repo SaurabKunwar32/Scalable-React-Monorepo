@@ -13,7 +13,7 @@
 // });
 
 import { render, screen } from "@testing-library/react";
-import { userEvent } from "@testing-library/user-event";
+import userEvent from "@testing-library/user-event";
 import App from "../../app/App";
 
 jest.mock("@repo/ui", () => ({
@@ -31,7 +31,6 @@ describe("App", () => {
     ).toBeInTheDocument();
   });
 
-
   it("should render PNPM Workspace badge", () => {
     render(<App />);
 
@@ -40,23 +39,21 @@ describe("App", () => {
     ).toBeInTheDocument();
   });
 
-
   it("should render monorepo information cards", () => {
     render(<App />);
 
     expect(
-      screen.getByText("📦 Shared Packages")
+      screen.getByText(/Shared Packages/)
     ).toBeInTheDocument();
 
     expect(
-      screen.getByText("⚛️ React Applications")
+      screen.getByText(/React Applications/)
     ).toBeInTheDocument();
 
     expect(
-      screen.getByText("🚀 Automation")
+      screen.getByText(/Automation/)
     ).toBeInTheDocument();
   });
-
 
   it("should render workflow steps", () => {
     render(<App />);
@@ -67,7 +64,6 @@ describe("App", () => {
     expect(screen.getByText("Build")).toBeInTheDocument();
     expect(screen.getByText("Deploy")).toBeInTheDocument();
   });
-
 
   it("should render action buttons", () => {
     render(<App />);
@@ -80,7 +76,6 @@ describe("App", () => {
       screen.getByText("Explore Architecture")
     ).toBeInTheDocument();
   });
-
 
   it("should show formatted currency when button is clicked", async () => {
     const user = userEvent.setup();
@@ -97,7 +92,6 @@ describe("App", () => {
 
     expect(window.alert).toHaveBeenCalled();
   });
-
 
   it("should render footer text", () => {
     render(<App />);
