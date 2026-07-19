@@ -66,4 +66,4 @@
 
 Built an enterprise-level frontend lifecycle covering:
 
-Monorepo → Development → Testing → Code Quality → Release → Deployment
+Monorepo  →  Development  →  Testing  →  Code Quality  →  Release  →  Deployment
